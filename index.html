@@ -19,8 +19,19 @@
 			background-color: #dd7;
 		}
 
+		.ingredients div:nth-child(even) {
+			background-color: #ffe;
+		}
+
 		.recipe{
 			background-color: #ee5;
+			counter-reset: section;
+		}
+
+		.recipe div::before {
+			counter-increment: section;
+			content: counter(section) ".";
+			padding-right: 2px;
 		}
 
 	</style>
